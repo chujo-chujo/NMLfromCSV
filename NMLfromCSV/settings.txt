@@ -1,0 +1,12 @@
+-- Path to the source CSV file ('../' -> the parent folder)
+csv_path=../input.csv
+
+-- true -> exported *.nml and *.lng files will automatically overwrite the current ones
+-- false -> exported *.nml and *.lng files will be timestamped (yymmdd_hhmmss) to prevent overwriting
+overwrite_export_files=true
+
+-- Name of the generated NML file
+export_filename=NMLfromCSV.nml
+
+-- CSV separator (default is a comma [,] can be replaced, e.g. if you need a comma in your lang strings)
+separator=,

@@ -1,0 +1,5 @@
+Grf ID, Version, Min. comp. version, NewGRF name, NewGRF desc., NewGRF url
+TEST, 0, 0, My NewGRF, Description…, https://
+
+File, Name of object, Dimensions, Height, Number of views, Class, Classname
+gfx/example_1.png, Skyscrapers, 2x2, 250, 4, TST1, City

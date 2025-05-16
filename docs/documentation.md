@@ -1,4 +1,4 @@
-### Purpose:
+## Purpose:
 
 The script reads object definitions from a CSV file and uses templates to generate two output files:
 
@@ -11,9 +11,9 @@ The tool is distributed with precompiled Lua binaries (`lua54.exe`, `lua54.dll`)
 lua54 NMLfromCSV.lua
 ```
 
-### Code Structure and Key Components:
+## Code Structure and Key Components:
 
-#### **Helpers Section:**
+### **Helpers Section:**
 
 Includes utility functions:
 
@@ -23,7 +23,7 @@ Includes utility functions:
 * `strToBool`: Converts a string to a boolean.
 * `slice`, `trim`, `split`: Table and string manipulation utilities.
 
-#### **Settings Loading:**
+### **Settings Loading:**
 
 * Reads `settings.txt` into a key-value `settings` table (e.g., CSV path, separator, export settings).
 * Settings can be overridden by command-line arguments. Example:
@@ -33,7 +33,7 @@ lua54 NMLfromCSV.lua separator=; export_filename=my_newgrf.nml
 ```
 
 
-#### **CSV Parsing:**
+### **CSV Parsing:**
 
 * Reads the CSV specified in `settings["csv_path"]`.
 * Extracts:
@@ -41,7 +41,7 @@ lua54 NMLfromCSV.lua separator=; export_filename=my_newgrf.nml
     * Line 2: Header metadata (e.g., GRFID, version, description).
     * Line 5 onwards: Object definitions.
 
-#### **Template Substitution:**
+### **Template Substitution:**
 
 * Uses a `templates` module to:
 
@@ -54,7 +54,7 @@ lua54 NMLfromCSV.lua separator=; export_filename=my_newgrf.nml
     * Replaces placeholders in the template.
     * Adds string references to the language file (`STR_OBJ_...`, `STR_...`).
 
-#### **File Output:**
+### **File Output:**
 
 * Writes the filled-in templates to:
 
